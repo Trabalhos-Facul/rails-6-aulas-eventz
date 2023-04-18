@@ -1,5 +1,9 @@
 <ul>
   <% @events.each do |event|%>
-    <li><%= event%> </li>
+    <li>
+      <strong> <%= event.name%> </strong>
+      em <%= event.location%>
+      <%= number_to_currency(event.price ,unit: "R$")%>
+    </li>
   <% end%>
 </ul>
